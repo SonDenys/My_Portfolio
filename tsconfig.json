@@ -21,7 +21,9 @@
     "**/*.tsx",
     "components/Slider.js",
     "components/Slider.js",
-    "pages/Slider/Carrousel.js"
+    "pages/SliderPage/Carrousel.js",
+    "components/Scrolling/ScrollToGrow/index.js",
+    "components/Scrolling/ScrollToGrow/index.js"
   ],
   "exclude": ["node_modules"]
 }

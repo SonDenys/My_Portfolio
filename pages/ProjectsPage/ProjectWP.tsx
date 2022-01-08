@@ -1,3 +1,5 @@
+import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01";
+
 const posts = [
   {
     title: "Projet n°1",
@@ -52,50 +54,52 @@ const posts = [
   },
 ];
 
-export default function Projects() {
+export default function ProjectsWP() {
   return (
-    <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 ">
+    <div className=" bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 ">
       <div className=" inset-0">
         <div className=" h-1/3 sm:h-2/3" />
       </div>
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            Mes projets
+            Mes projets Wordpress
           </h2>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none ">
-          {posts.map((post) => (
-            <div
-              key={post.title}
-              className="bg-white flex flex-col transition duration-500 ease-in-out rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer lg:hover:scale-125 "
-            >
-              <div className="flex-shrink-0">
-                <img
-                  className="h-full w-full object-cover"
-                  src={post.imageUrl}
-                />
-              </div>
-              <div className="flex-1 p-4 flex flex-col justify-between absolute bg-black bg-opacity-70 top-40">
-                <div className="">
-                  <a href={post.href} className="block mt-2">
-                    <p className="text-xl font-semibold text-white">
-                      {post.title}
-                    </p>
-                    <p className="mt-3 text-base text-gray-300">
-                      {post.description}
-                    </p>
-                  </a>
+        <ScrollToFade01 threshold={1000}>
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none ">
+            {posts.map((post) => (
+              <div
+                key={post.title}
+                className="bg-white flex flex-col  rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer  "
+              >
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-full w-full object-cover transition duration-500 ease-in-out lg:hover:scale-125"
+                    src={post.imageUrl}
+                  />
                 </div>
+                <div className="flex-1 p-4 flex flex-col justify-between absolute bg-black bg-opacity-70 top-40">
+                  <div className="">
+                    <a href={post.href} className="block mt-2">
+                      <p className="text-xl font-semibold text-white">
+                        {post.title}
+                      </p>
+                      <p className="mt-3 text-base text-gray-300">
+                        {post.description}
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                {/* <div className=" flex justify-around mt-11 max-w-lg lg:grid-cols-3 lg:max-w-none h-full bg-white">
+                <p>Icons</p>
+                <p>Icons</p>
+                <p>Icons</p>
+              </div> */}
               </div>
-              <div className=" flex justify-around mt-11 max-w-lg lg:grid-cols-3 lg:max-w-none h-full bg-white">
-                <p>Icons</p>
-                <p>Icons</p>
-                <p>Icons</p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollToFade01>
       </div>
     </div>
   );

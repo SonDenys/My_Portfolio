@@ -1,4 +1,6 @@
-/* This example requires Tailwind CSS v2.0+ */
+import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01/index";
+import ScrollToGrow01 from "../../components/Scrolling/ScrollToGrow";
+
 const posts = [
   {
     title: "Applications Web",
@@ -68,34 +70,36 @@ export default function Services() {
             Mes services
           </h2>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none ">
-          {posts.map((post) => (
-            <div
-              key={post.title}
-              className="flex flex-col rounded-lg overflow-hidden hover:shadow-xl cursor-pointer  shadow-zinc-500/70"
-            >
-              <div className="flex-shrink-0">
-                <img
-                  className="h-48 w-full object-cover"
-                  src={post.imageUrl}
-                  alt=""
-                />
-              </div>
-              <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <a href={post.href} className="block mt-2">
-                    <p className="text-xl font-semibold text-gray-900">
-                      {post.title}
-                    </p>
-                    <p className="mt-3 text-base text-gray-500">
-                      {post.description}
-                    </p>
-                  </a>
+        <ScrollToGrow01 threshold={1200}>
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none ">
+            {posts.map((post) => (
+              <div
+                key={post.title}
+                className="flex flex-col rounded-lg overflow-hidden hover:shadow-xl cursor-pointer  shadow-zinc-500/70"
+              >
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-48 w-full object-cover"
+                    src={post.imageUrl}
+                    alt=""
+                  />
+                </div>
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                  <div className="flex-1">
+                    <a href={post.href} className="block mt-2">
+                      <p className="text-xl font-semibold text-gray-900">
+                        {post.title}
+                      </p>
+                      <p className="mt-3 text-base text-gray-500">
+                        {post.description}
+                      </p>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollToGrow01>
       </div>
     </div>
   );

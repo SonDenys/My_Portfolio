@@ -1,17 +1,20 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import About from "./About/About";
-import Home from "./Home/Home";
-import Services from "./Services/Services";
+import Home from "./Homepage/Home";
+import Services from "./ServicesPage/Services";
 
 import dynamic from "next/dynamic";
-import Projects from "./Projects/Projects";
+import ProjectReact from "./ProjectsPage/ProjectReact";
+import ProjectWP from "./ProjectsPage/ProjectWP";
+import Skills from "./SkillsPage/skills";
 
 export default function App() {
-  const Slider = dynamic(() => import("../pages/Slider/Slider"), {
-    ssr: false,
-  });
+  // const Slider = dynamic(() => import("../pages/Slider/Slider"), {
+  //   ssr: false,
+  // });
+
   return (
     <div>
       <Head>
@@ -28,8 +31,9 @@ export default function App() {
       <Home />
       <About />
       <Services />
-      <Projects />
-      {/* <Slider /> */}
+      <ProjectReact />
+      <ProjectWP />
+      <Skills />
     </div>
   );
 }
