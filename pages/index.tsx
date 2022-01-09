@@ -8,7 +8,8 @@ import Services from "./ServicesPage/Services";
 import dynamic from "next/dynamic";
 import ProjectReact from "./ProjectsPage/ProjectReact";
 import ProjectWP from "./ProjectsPage/ProjectWP";
-import Skills from "./SkillsPage/skills";
+import Skills from "./SkillsPage/Skills";
+import MyTitle from "../components/MyTitle";
 
 export default function App() {
   // const Slider = dynamic(() => import("../pages/Slider/Slider"), {
@@ -33,6 +34,7 @@ export default function App() {
       <Services />
       <ProjectReact />
       <ProjectWP />
+      <MyTitle title="Mes compétences" />
       <Skills />
     </div>
   );

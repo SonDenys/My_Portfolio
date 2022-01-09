@@ -19,7 +19,7 @@ const features = [
 
 const Backend = () => {
   return (
-    <div className="relative  py-16 sm:py-24 lg:py-32">
+    <div className="relative py-16 sm:py-24 lg:py-32 -z-10 border-l-2 border-gray-200 ">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-indigo-600 uppercase">
           Backend
@@ -31,9 +31,9 @@ const Backend = () => {
                 <div className="flow-root rounded-lg px-6 pb-8">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg shadow-zinc-700">
                         <feature.icon
-                          className="h-6 w-6 text-white"
+                          className="h-6 w-6 text-white "
                           aria-hidden="true"
                         />
                       </span>

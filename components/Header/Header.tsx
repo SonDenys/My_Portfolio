@@ -61,7 +61,7 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Popover className="">
+    <Popover className="z-50">
       <div className=" fixed w-full flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <a href="#" className="flex">
@@ -74,7 +74,7 @@ export default function Header() {
           </a>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
-          <Popover.Button className="z-0 rounded-md p-2 inline-flex items-center justify-center text-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+          <Popover.Button className=" rounded-md p-2 inline-flex items-center justify-center text-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
             <span className="sr-only">Open menu</span>
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
@@ -120,7 +120,7 @@ export default function Header() {
             >
               Contact me
             </button> */}
-            <Popover.Button className="z-0 rounded-md p-2 inline-flex items-center justify-center text-gray-800 hover:text-sky-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-800">
+            <Popover.Button className=" rounded-md p-2 inline-flex items-center justify-center text-gray-800 hover:text-sky-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-800">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -141,7 +141,7 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="fixed z-0 bg-black bg-opacity-50 h-screen top-0 right-0 p-2 transition transform origin-top-right"
+          className="fixed bg-black bg-opacity-70 h-screen top-0 right-0 p-2 transition transform origin-top-right"
         >
           <div className="">
             <div className="pt-5 pb-6 px-5">

@@ -60,7 +60,7 @@ const posts = [
 
 export default function Services() {
   return (
-    <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 -z-10 ">
+    <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 -z-10">
       <div className="absolute inset-0">
         <div className="bg-white h-1/3 sm:h-2/3" />
       </div>
@@ -75,7 +75,7 @@ export default function Services() {
             {posts.map((post) => (
               <div
                 key={post.title}
-                className="flex flex-col rounded-lg overflow-hidden hover:shadow-xl cursor-pointer  shadow-zinc-500/70"
+                className="flex flex-col rounded-lg overflow-hidden hover:shadow-xl cursor-pointer  shadow-zinc-500/70 shadow-lg"
               >
                 <div className="flex-shrink-0">
                   <img

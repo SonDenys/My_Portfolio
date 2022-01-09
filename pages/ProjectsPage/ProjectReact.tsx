@@ -51,7 +51,7 @@ export default function ProjectReact(props) {
       <div className="max-w-2xl mx-auto py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Mes projets d'applications web/mobile
+            Mes projets web/mobile
           </h2>
           <p className="mt-4 text-gray-500">
             As a digital creative, your laptop or tablet is at the center of
@@ -90,7 +90,7 @@ export default function ProjectReact(props) {
                     "flex-auto lg:row-start-1 lg:col-span-7 xl:col-span-8"
                   )}
                 >
-                  <div className="aspect-w-5 aspect-h-2 rounded-lg bg-gray-100 overflow-hidden">
+                  <div className="aspect-w-5 aspect-h-2 rounded-lg bg-gray-100 overflow-hidden ">
                     <img
                       src={feature.imageSrc}
                       alt={feature.imageAlt}

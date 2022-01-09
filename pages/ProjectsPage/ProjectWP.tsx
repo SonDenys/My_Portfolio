@@ -56,7 +56,7 @@ const posts = [
 
 export default function ProjectsWP() {
   return (
-    <div className=" bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 ">
+    <div className=" bg-gray-100 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
       <div className=" inset-0">
         <div className=" h-1/3 sm:h-2/3" />
       </div>
@@ -71,12 +71,13 @@ export default function ProjectsWP() {
             {posts.map((post) => (
               <div
                 key={post.title}
-                className="bg-white flex flex-col  rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer  "
+                className="bg-white flex flex-col rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer "
               >
                 <div className="flex-shrink-0">
                   <img
                     className="h-full w-full object-cover transition duration-500 ease-in-out lg:hover:scale-125"
                     src={post.imageUrl}
+                    alt="image"
                   />
                 </div>
                 <div className="flex-1 p-4 flex flex-col justify-between absolute bg-black bg-opacity-70 top-40">
