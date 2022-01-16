@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Home = () => {
   return (
     <div className="m-auto h-screen flex justify-evenly border-red-500 border-2">
