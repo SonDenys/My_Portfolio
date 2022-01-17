@@ -10,6 +10,7 @@ import ProjectReact from "./ProjectsPage/ProjectReact";
 import ProjectWP from "./ProjectsPage/ProjectWP";
 import Skills from "./SkillsPage/Skills";
 import MyTitle from "../components/MyTitle";
+import Experiences from "./Experiences";
 
 export default function App() {
   // const Slider = dynamic(() => import("../pages/Slider/Slider"), {
@@ -27,8 +28,7 @@ export default function App() {
           rel="stylesheet"
         />
       </Head>
-      {/* 
-      <Header /> */}
+      <Header />
       <Home />
       <About />
       <Services />
@@ -36,6 +36,7 @@ export default function App() {
       <ProjectWP />
       <MyTitle title="Mes compétences" />
       <Skills />
+      <Experiences />
     </>
   );
 }
