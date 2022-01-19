@@ -71,7 +71,7 @@ export default function ProjectsWP() {
             {posts.map((post) => (
               <div
                 key={post.title}
-                className="bg-white flex flex-col rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer "
+                className="flex flex-col rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer "
               >
                 <div className="flex-shrink-0">
                   <img

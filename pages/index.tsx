@@ -36,6 +36,7 @@ export default function App() {
       <ProjectWP />
       <MyTitle title="Mes compétences" />
       <Skills />
+
       <Experiences />
     </>
   );

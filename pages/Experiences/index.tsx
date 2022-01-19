@@ -1,3 +1,4 @@
+import MyCercle from "../../components/MyCercle";
 import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01";
 
 const posts = [
@@ -66,6 +67,10 @@ export default function Experiences() {
             Mes experiences
           </h2>
         </div>
+      </div>
+      <div className="mt-20 flex justify-around">
+        <MyCercle title="Olalalala" />
+        <MyCercle />
       </div>
     </div>
   );

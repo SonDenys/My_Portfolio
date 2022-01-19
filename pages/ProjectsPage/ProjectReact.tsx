@@ -79,7 +79,7 @@ export default function ProjectReact(props) {
                     {feature.name}
                   </h3>
                   <p className="mt-2 text-sm text-gray-500">
-                    {feature.description}
+                    {feature.description}cd ..
                   </p>
                 </div>
                 <div
