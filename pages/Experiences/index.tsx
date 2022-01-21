@@ -1,3 +1,4 @@
+import MyArrow from "../../components/MyArrow";
 import MyCercle from "../../components/MyCercle";
 import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01";
 
@@ -68,8 +69,10 @@ export default function Experiences() {
           </h2>
         </div>
       </div>
-      <div className="mt-20 flex justify-around">
+      <div className="mt-20 flex justify-evenly px-40">
         <MyCercle title="Olalalala" />
+        <MyArrow />
+
         <MyCercle />
       </div>
     </div>
