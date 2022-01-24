@@ -1,3 +1,6 @@
+import Link from "next/link";
+import mycv from "../../public/MonCV.png";
+
 const About = () => {
   return (
     <div className="m-auto h-screen border-purple-500 border-2">

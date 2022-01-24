@@ -11,6 +11,7 @@ import ProjectWP from "./ProjectsPage/ProjectWP";
 import Skills from "./SkillsPage/Skills";
 import MyTitle from "../components/MyTitle";
 import Experiences from "./Experiences";
+import MyContactForm from "../components/MyContactForm";
 
 export default function App() {
   // const Slider = dynamic(() => import("../pages/Slider/Slider"), {
@@ -38,6 +39,7 @@ export default function App() {
       <Skills />
 
       <Experiences />
+      <MyContactForm />
     </>
   );
 }

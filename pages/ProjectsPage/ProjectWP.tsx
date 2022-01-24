@@ -1,7 +1,9 @@
+import { useState } from "react";
 import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01";
 
 const posts = [
   {
+    key: 1,
     title: "Projet n°1",
     href: "#",
     category: { name: "Article", href: "#" },
@@ -19,6 +21,7 @@ const posts = [
     },
   },
   {
+    key: 2,
     title: "Projet n°2",
     href: "#",
     category: { name: "Video", href: "#" },
@@ -36,6 +39,7 @@ const posts = [
     },
   },
   {
+    key: 3,
     title: "Projet n°3",
     href: "#",
     category: { name: "Case Study", href: "#" },
@@ -55,6 +59,8 @@ const posts = [
 ];
 
 export default function ProjectsWP() {
+  const [show, setShow] = useState(false);
+
   return (
     <div className=" bg-gray-100 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
       <div className=" inset-0">
@@ -70,7 +76,7 @@ export default function ProjectsWP() {
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none ">
             {posts.map((post) => (
               <div
-                key={post.title}
+                key={post.key}
                 className="flex flex-col rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer "
               >
                 <div className="flex-shrink-0">
@@ -82,13 +88,21 @@ export default function ProjectsWP() {
                 </div>
                 <div className="flex-1 p-4 flex flex-col justify-between absolute bg-black bg-opacity-70 top-40">
                   <div className="">
-                    <a href={post.href} className="block mt-2">
-                      <p className="text-xl font-semibold text-white">
+                    <a key={post.key} className="block mt-2">
+                      <p
+                        className="text-xl font-semibold text-white"
+                        onClick={() => setShow(!show)}
+                      >
                         {post.title}
                       </p>
-                      <p className="mt-3 text-base text-gray-300">
-                        {post.description}
-                      </p>
+                      {show ? (
+                        <p
+                          key={post.key}
+                          className="mt-3 text-base text-gray-300"
+                        >
+                          {post.description}
+                        </p>
+                      ) : null}
                     </a>
                   </div>
                 </div>
