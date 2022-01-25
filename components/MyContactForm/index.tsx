@@ -1,18 +1,34 @@
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 import { useState } from "react";
-
-export interface MyContactFormProps {
-  email: string;
-  message: string;
-}
+import axios from "axios";
 
 const MyContactForm = () => {
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+
+  //   const data = {
+  //     email: email,
+  //     subject: subject,
+  //     message: message,
+  //   };
+
+  //   try {
+  //     const response = await axios.post("http://localhost:3000/", data);
+  //     if (response.status === 200) {
+  //       alert("Votre formulaire a bien été envoyé");
+  //     }
+  //   } catch (e) {
+  //     if (e.response.data.error === "Missing parameters") {
+  //       alert("Veuillez remplir tous les champs du formulaire");
+  //     } else {
+  //       alert("Une erreur est survenue");
+  //     }
+  //   }
+  // };
 
   return (
     <div className="bg-gray-100">
@@ -221,7 +237,7 @@ const MyContactForm = () => {
                 action="#"
                 method="POST"
                 className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-                onSubmit={handleSubmit}
+                // onSubmit={handleSubmit}
               >
                 <div>
                   <label
@@ -255,6 +271,7 @@ const MyContactForm = () => {
                       name="subject"
                       id="subject"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      onChange={(event) => setSubject(event.target.value)}
                     />
                   </div>
                 </div>
@@ -267,8 +284,8 @@ const MyContactForm = () => {
                       Message
                     </label>
                     {/* <span id="message-max" className="text-sm text-gray-500">
-                      Max. 500 characters
-                    </span> */}
+                        Max. 500 characters
+                      </span> */}
                   </div>
                   <div className="mt-1">
                     <textarea

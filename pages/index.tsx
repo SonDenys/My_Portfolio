@@ -39,7 +39,7 @@ export default function App() {
       <Skills />
 
       <Experiences />
-      <MyContactForm />
+      {/* <MyContactForm /> */}
     </>
   );
 }
