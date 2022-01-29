@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div className="m-auto h-screen flex justify-evenly border-red-500 border-2">
+    <div
+      className="m-auto h-screen flex justify-evenly border-red-500 border-2"
+      id="home"
+    >
       <div className="border-black border-2 m-auto">
         <h1 className="mt-4 text-4xl font-extrabold text-gray-900 tracking-tight ">
           Salut,

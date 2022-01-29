@@ -1,6 +1,5 @@
-import MyArrow from "../../components/MyArrow";
-import MyCercle from "../../components/MyCercle";
-import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01";
+import MyArrow from "../../MyArrow";
+import MyCercle from "../../MyCercle";
 
 const posts = [
   {
@@ -56,9 +55,12 @@ const posts = [
   },
 ];
 
-export default function Experiences() {
+const Experiences = () => {
   return (
-    <div className=" bg-gray-100 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div
+      className=" bg-gray-100 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      id="experiences"
+    >
       <div className=" inset-0">
         <div className=" h-1/3 sm:h-2/3" />
       </div>
@@ -72,9 +74,10 @@ export default function Experiences() {
       <div className="mt-20 flex justify-evenly px-40">
         <MyCercle title="Olalalala" />
         <MyArrow />
-
         <MyCercle />
       </div>
     </div>
   );
-}
+};
+
+export default Experiences;

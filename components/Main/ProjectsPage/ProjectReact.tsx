@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import Image from "next/image";
 import { useState } from "react";
-import ScrollToGrow from "../../components/Scrolling/ScrollToGrow";
+import ScrollToGrow from "../../Scrolling/ScrollToGrow";
 
 const features = [
   {
@@ -42,12 +42,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function ProjectReact(props) {
+const ProjectReact = () => {
   const [active, setActive] = useState(false);
   const theme = createMuiTheme();
 
   return (
-    <div className="">
+    <div className="-z-10" id="projects">
       <div className="max-w-2xl mx-auto py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -94,7 +94,7 @@ export default function ProjectReact(props) {
                     <img
                       src={feature.imageSrc}
                       alt={feature.imageAlt}
-                      className="object-center object-cover transition duration-500 ease-in-out lg:hover:scale-125 cursor-pointer "
+                      className="object-center object-cover transition duration-500 ease-in-out lg:hover:scale-125 cursor-pointer"
                     />
                   </div>
                 </div>
@@ -105,4 +105,6 @@ export default function ProjectReact(props) {
       </div>
     </div>
   );
-}
+};
+
+export default ProjectReact;

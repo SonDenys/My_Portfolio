@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ScrollToFade01 from "../../components/Scrolling/ScrollToFade/01";
+import ScrollToFade01 from "../../Scrolling/ScrollToGrow/index";
 
 const posts = [
   {
@@ -58,7 +58,7 @@ const posts = [
   },
 ];
 
-export default function ProjectsWP() {
+const ProjectsWP = () => {
   const [show, setShow] = useState(false);
 
   return (
@@ -66,7 +66,7 @@ export default function ProjectsWP() {
       <div className=" inset-0">
         <div className=" h-1/3 sm:h-2/3" />
       </div>
-      <div className="relative max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
             Mes projets Wordpress
@@ -77,7 +77,7 @@ export default function ProjectsWP() {
             {posts.map((post) => (
               <div
                 key={post.key}
-                className="flex flex-col rounded-lg shadow-lg overflow-hidden relative shadow-zinc-700 cursor-pointer "
+                className="flex flex-col rounded-lg shadow-lg overflow-hidden shadow-zinc-700 cursor-pointer "
               >
                 <div className="flex-shrink-0">
                   <img
@@ -86,7 +86,7 @@ export default function ProjectsWP() {
                     alt="image"
                   />
                 </div>
-                <div className="flex-1 p-4 flex flex-col justify-between absolute bg-black bg-opacity-70 top-40">
+                <div className="flex-1 p-4 flex flex-col justify-between bg-black bg-opacity-70 top-40">
                   <div className="">
                     <a key={post.key} className="block mt-2">
                       <p
@@ -118,4 +118,6 @@ export default function ProjectsWP() {
       </div>
     </div>
   );
-}
+};
+
+export default ProjectsWP;

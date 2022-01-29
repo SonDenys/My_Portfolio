@@ -1,9 +1,10 @@
 import Link from "next/link";
+import MyClipboard from "../../MyClipBoard";
 import mycv from "../../public/MonCV.png";
 
 const About = () => {
   return (
-    <div className="m-auto h-screen border-purple-500 border-2">
+    <div className="m-auto h-screen border-purple-500 border-2" id="about">
       <div className="bg-green-600 border-2 cover h-full w-full inline ">
         Picture
       </div>
@@ -14,6 +15,7 @@ const About = () => {
         <h2 className="text-2xl font-extralight">
           I am Denis, I am a React Software Engineer
         </h2>
+        <MyClipboard />
       </div>
     </div>
   );

@@ -11,46 +11,47 @@ import {
   BriefcaseIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon, IdentificationIcon } from "@heroicons/react/solid";
+import * as Scroll from "react-scroll";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
-const solutions = [
+const navLinks = [
   {
     name: "A propos de moi",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    path: "about",
     icon: IdentificationIcon,
   },
   {
     name: "Mes services",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    path: "services",
     icon: SupportIcon,
   },
   {
     name: "Projets",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
+    path: "projects",
     icon: CollectionIcon,
   },
   {
     name: "Compétences",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    path: "skills",
     icon: DesktopComputerIcon,
   },
 
   {
     name: "Experiences",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    path: "experiences",
     icon: BriefcaseIcon,
   },
   {
     name: "Formation",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
-    href: "#",
+    path: "training",
     icon: AcademicCapIcon,
   },
 ];
@@ -162,11 +163,15 @@ export default function Header() {
               </div>
               <div className="mt-6 pr-20">
                 <nav className="grid gap-6 hover:text-black">
-                  {solutions.map((item) => (
-                    <a
+                  {navLinks.map((item) => (
+                    <Link
                       key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-lg text-white hover:text-zinc-800 hover:bg-sky-100"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      href={`/#${item.path}`}
+                      to={`${item.path}`}
+                      className="-m-3 p-3 flex items-center rounded-lg text-white hover:text-zinc-800 hover:bg-sky-100 cursor-pointer"
                     >
                       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md">
                         <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -174,7 +179,7 @@ export default function Header() {
                       <div className="ml-4 text-base font-medium">
                         {item.name}
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>

@@ -1,8 +1,8 @@
-import ScrollToGrow from "../../components/Scrolling/ScrollToGrow";
-import Backend from "../../components/SkillsComponents/Backend";
-import Frontend from "../../components/SkillsComponents/Frontend";
-import Skill from "../../components/SkillsComponents/Skill";
-import Tools from "../../components/SkillsComponents/Tools";
+import ScrollToGrow from "../../Scrolling/ScrollToGrow";
+import Backend from "../../SkillsComponents/Backend";
+import Frontend from "../../SkillsComponents/Frontend";
+import Skill from "../../SkillsComponents/Skill";
+import Tools from "../../SkillsComponents/Tools";
 
 const tools = ["Git", "GitHub"];
 
@@ -34,7 +34,7 @@ const allBackend = backend.map((tech) => <Skill name={tech} key={tech} />);
 const Skills = () => {
   return (
     <ScrollToGrow threshold={2000}>
-      <div className="">
+      <div>
         <Frontend
           allTools={allTools}
           allServices={allServices}
