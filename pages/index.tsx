@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/index";
+import MyFooter from "../components/MyFooter";
 
 const App = () => {
   // const Slider = dynamic(() => import("../pages/Slider/Slider"), {
@@ -15,6 +16,7 @@ const App = () => {
       </Head>
       <Header />
       <Main />
+      <MyFooter />
     </>
   );
 };

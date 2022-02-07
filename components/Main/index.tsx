@@ -9,6 +9,7 @@ import Services from "./ServicesPage/Services";
 import Skills from "./SkillsPage/Skills";
 
 import { Element } from "react-scroll";
+import Training from "./Training";
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
         <MyTitle title="Mes compétences" id="skills" />
         <Skills />
         <Experiences />
+        <Training />
       </Element>
     </React.Fragment>
   );
